@@ -1,7 +1,14 @@
 import React from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
-
+import HomeIcon from "@mui/icons-material/Home";
+import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+import StorefrontIcon from "@mui/icons-material/Storefront";
+import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
+import ForumIcon from "@mui/icons-material/Forum";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import AppsIcon from "@mui/icons-material/Apps";
+import { Avatar, IconButton } from "@mui/material";
 function Header() {
   return (
     <div className="header">
@@ -12,10 +19,35 @@ function Header() {
         />
         <div className="header__input">
           <SearchIcon />
+          <input type="text" placeholder="Search Facebook" />
         </div>
       </div>
-      <div className="header__middle"></div>
-      <div className="header__right"></div>
+      <div className="header__middle">
+        <div className="header__option">
+          <HomeIcon fontSize="large" />
+        </div>
+        <div className="header__option">
+          <OndemandVideoIcon fontSize="large" />
+        </div>
+        <div className="header__option">
+          <StorefrontIcon fontSize="large" />
+        </div>
+        <div className="header__option">
+          <SupervisedUserCircleIcon fontSize="large" />
+        </div>
+      </div>
+      <div className="header__right">
+        <IconButton>
+          <AppsIcon />
+        </IconButton>
+        <IconButton>
+          <ForumIcon />
+        </IconButton>
+        <IconButton>
+          <NotificationsIcon />
+        </IconButton>
+        <Avatar />
+      </div>
     </div>
   );
 }
